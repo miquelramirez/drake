@@ -62,5 +62,5 @@ std::string QuaternionBallJoint::getVelocityName(int index) const {
 std::unique_ptr<DrakeJoint> QuaternionBallJoint::DoClone() const {
   auto joint = std::make_unique<QuaternionBallJoint>(
       get_name(), get_transform_to_parent_body());
-  return std::move(joint);
+  return joint;
 }

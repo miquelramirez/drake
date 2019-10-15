@@ -5,7 +5,6 @@ load("@cc//:compiler.bzl", "COMPILER_ID")
 # The CXX_FLAGS will be enabled for all C++ rules in the project
 # building with any compiler.
 CXX_FLAGS = [
-    "-Werror=all",
     "-Werror=deprecated",
     "-Werror=deprecated-declarations",
     "-Werror=ignored-qualifiers",

@@ -255,7 +255,7 @@ ParseJointType(sdf::ElementPtr sdf_joint_element,
         frame_cache.Transform(parent_body.get_name(), joint_name);
     auto joint = std::make_unique<RevoluteJoint>(
         joint_name, X_PF, axis_of_rotation);
-    return std::move(joint);
+    return joint;
   }
   // TODO(hidmic): Support prismatic and fixed joints.
   throw std::domain_error("Unsupported joint type!");

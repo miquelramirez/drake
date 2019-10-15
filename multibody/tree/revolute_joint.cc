@@ -28,7 +28,7 @@ RevoluteJoint<T>::TemplatedDoCloneToScalar(
   joint_clone->set_acceleration_limits(this->acceleration_lower_limits(),
                                        this->acceleration_upper_limits());
 
-  return std::move(joint_clone);
+  return joint_clone;
 }
 
 template <typename T>
@@ -59,7 +59,7 @@ RevoluteJoint<T>::MakeImplementationBlueprint() const {
   blue_print->mobilizers_.push_back(
       std::make_unique<internal::RevoluteMobilizer<T>>(
           this->frame_on_parent(), this->frame_on_child(), axis_));
-  return std::move(blue_print);
+  return blue_print;
 }
 
 }  // namespace multibody

@@ -8,6 +8,7 @@
 
 #include "drake/common/drake_nodiscard.h"
 
+
 namespace drake {
 namespace test {
 /// Checks if @p value of @p T type is movable via memcpy. That is, it tests

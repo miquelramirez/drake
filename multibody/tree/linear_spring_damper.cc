@@ -152,7 +152,6 @@ LinearSpringDamper<T>::TemplatedDoCloneToScalar(
       bodyA_clone, p_AP(), bodyB_clone, p_BQ(),
       free_length(), stiffness(), damping());
 
-  //return std::move(spring_damper_clone);
   return spring_damper_clone;
 }
 

@@ -347,7 +347,7 @@ class Joint : public MultibodyTreeElement<Joint<T>, JointIndex>  {
         this->get_implementation().template CloneToScalar<ToScalar>(tree_clone);
     joint_clone->OwnImplementation(std::move(implementation_clone));
 
-    return std::move(joint_clone);
+    return joint_clone;
   }
 #endif
   // End of hidden Doxygen section.

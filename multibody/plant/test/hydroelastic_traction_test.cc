@@ -643,7 +643,7 @@ TEST_P(HydroelasticReportingTests, LinearTraction) {
           calculator_data(), dissipation, mu_coulomb);
 
   // Test the traction at the vertices of the contact surface.
-  for (SurfaceVertexIndex(i);
+  for (SurfaceVertexIndex i;
       i < calculator_data().surface.mesh_W().num_vertices(); ++i) {
     // Evaluate the traction at vertex i on Body A (the body to which geometry
     // M is attached).
@@ -668,7 +668,7 @@ TEST_P(HydroelasticReportingTests, LinearTraction) {
   // is linear and (b) there is no sliding velocity.
   // 1. Compute the mean of the tractions at the vertices.
   Vector3<double> expected_traction_A_W = Vector3<double>::Zero();
-  for (SurfaceVertexIndex(i);
+  for (SurfaceVertexIndex i;
       i < calculator_data().surface.mesh_W().num_vertices(); ++i) {
     expected_traction_A_W += fields.traction_A_W->EvaluateAtVertex(i);
   }
@@ -706,7 +706,7 @@ TEST_P(HydroelasticReportingTests, LinearSlipVelocity) {
 
   // Test the slip velocity at the vertices of the contact surface.
   const SurfaceMesh<double>& mesh = calculator_data().surface.mesh_W();
-  for (SurfaceVertexIndex(i); i < mesh.num_vertices(); ++i) {
+  for (SurfaceVertexIndex i; i < mesh.num_vertices(); ++i) {
     // Compute the vertex location (V) in the world frame.
     const Vector3<double>& p_WV = mesh.vertex(i).r_MV();
 

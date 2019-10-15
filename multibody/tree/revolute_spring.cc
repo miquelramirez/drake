@@ -73,7 +73,7 @@ RevoluteSpring<T>::TemplatedDoCloneToScalar(
   auto spring_clone = std::make_unique<RevoluteSpring<ToScalar>>(
       joint_clone, nominal_angle(), stiffness());
 
-  return std::move(spring_clone);
+  return spring_clone;
 }
 
 template <typename T>
