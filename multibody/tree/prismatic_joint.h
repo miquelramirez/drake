@@ -285,7 +285,7 @@ class PrismaticJoint final : public Joint<T> {
     blue_print->mobilizers_.push_back(
         std::make_unique<internal::PrismaticMobilizer<T>>(
             this->frame_on_parent(), this->frame_on_child(), axis_));
-    return std::move(blue_print);
+    return blue_print;
   }
 
   std::unique_ptr<Joint<double>> DoCloneToScalar(

@@ -26,7 +26,7 @@ class VisualElement final : public Element {
   /** Copy constructor for use by, e.g., std::vector. */
   VisualElement(const VisualElement&) = default;
   void operator=(const VisualElement&) = delete;
-  VisualElement(VisualElement&&) = delete;
+  VisualElement(VisualElement&&) = default;
   void operator=(VisualElement&&) = delete;
 
   ~VisualElement() override = default;
